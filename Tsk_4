@@ -1,0 +1,79 @@
+print("Boy kütke indeksi hesaplama ve Bazal metabolik oran programıdır ...")
+
+
+def bkt(b,k):
+    print("Hoşgeldiniz Boy kütle indeksini hesaplıcaz sizin...")
+    bki = k//b**2
+    if bki <= 18.5:
+        print("Kilosuz",bki)
+    elif 18.5 <= bki <= 25:
+        print("Normal",bki)
+    elif 25 <= bki <= 30:
+        print("Fazla Kilolu",bki)
+    elif 30 <= bki:
+        print("Obez sin ",bki)
+
+def Bazal(b,k,y):
+    print("Plesea enter your gender : ")
+    c = input(" : ")
+    if c == "female":
+        bmrk = 10*k + 6.25 * b - 5 * y - 161
+        print("your bmr :",bmrk)
+    elif c == "male":
+        bmre = 10*k + 6.25 * b - 5 * y + 5
+        print("your bmr : ",bmre)
+
+
+def calori_per_day(bmrk, bmre, y):
+    print("Plesea enter your gender : ")
+    c = input(" : ")
+    if c == "female":
+        bmrk = 10*k + 6.25 * b - 5 * y - 161
+        print("your bmr :",bmrk)
+    elif c == "male":
+        bmre = 10*k + 6.25 * b - 5 * y + 5
+        print("your bmr : ",bmre)
+    sedentary = bmrk + bmrk % 10
+    lightl_active = bmrk + bmrk % 20
+    moderatly_active = bmrk + bmrk % 30
+    very_active = bmrk + bmrk % 40
+
+    sedentarye = bmre + bmre % 10
+    lightl_activee = bmre + bmre % 20
+    moderatly_activee = bmre + bmre % 30
+    very_activee = bmre + bmre % 40
+
+    print("Kadınlar için günlük kalori alımı")
+    print(sedentary,"hareketiz")
+    print(lightl_active,"hafif hareketli")
+    print(moderatly_active,"nerdeyse hareketli")
+    print(very_active,"hareketli")
+
+    print("Erkekler için ise")
+    print(sedentarye,"hareketiz")
+    print(lightl_activee,"hafif hareketli")
+    print(moderatly_activee,"nerdeyse hareketli")
+    print(very_activee,"hareketli")
+
+
+print("Seçeneğiniz nedir boy kütle indeksi için 1 e bazal metbolizma için 2 ye günlük kalori için 3 e basın teşekkürler:")
+
+sec = int(input(" : "))
+
+
+if sec == 1:
+    b = float(input("boyunuzu giriniz : "))
+    k = int(input("kilonuzu giriniz : "))
+    bkt(b, k)
+elif sec == 2:
+    b = float(input("boyunuzu giriniz : "))
+    k = int(input("kilonuzu giriniz : "))
+    print("please enter your age...")
+    y = int(input(" : "))
+    Bazal(b,k,y)
+elif sec == 3:
+    b = float(input("boyunuzu giriniz : "))
+    k = int(input("kilonuzu giriniz : "))
+    print("please enter your age...")
+    y = int(input(" : "))
+    calori_per_day(b,k,y)
